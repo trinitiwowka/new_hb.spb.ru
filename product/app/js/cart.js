@@ -35,6 +35,11 @@ $(document).ready(function () {
             tempCart["data-color"] = temp_product_color;
         }
 
+        var temp_product_price = $(".tabs__item.active .price span").attr("data-price");;
+        if (temp_product_price != undefined) {
+            tempCart["data-price"] = temp_product_price;
+        }
+
         if (tempCart["data-size"] == undefined || tempCart["data-color"] == undefined) {
             alert("выберите цвет/размер");
         }
@@ -48,7 +53,7 @@ $(document).ready(function () {
             $(".color__btn").removeClass("active");
 
             $(".size__btn").text("Добавлено!").mouseleave(function () {
-                $(this).text("В корзину").off();
+                $(this).text("В корзину");
 
             });
 
@@ -65,7 +70,8 @@ $(document).ready(function () {
             var productJSON = {
                 "name": temp_product_name,
                 "size": temp_product_size,
-                "color": temp_product_color
+                "color": temp_product_color,
+                "price": temp_product_price
             };
 
             if (localStorage.getObj('product') !== null) {

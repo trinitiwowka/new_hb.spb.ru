@@ -16,8 +16,9 @@ $(document).ready(function () {
     $('a[href^="#"]').click(function(){
     $('.wrapper__menu').removeClass('active');
     var scroll_el = $(this).attr('href');
-    $('html, body').animate({scrollTop: $(scroll_el).offset().top - 50}, 600);
-    return false; 
+    $('html, body').animate({scrollTop: $(scroll_el).offset().top}, 600);
+    //$('html, body').animate({scrollTop: $(scroll_el).offset().top - 50}, 600);
+    return false;
     });
 
 

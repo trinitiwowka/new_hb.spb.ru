@@ -399,6 +399,12 @@ body.itsie .bg.active .bg__logo{
 
 .menu__list > li > a{
     display: block;
+    position: relative;
+}
+.menu__list > li > .cart-count{
+    position:absolute;
+    top: 0;
+    right: 0;
 }
 
 .menu__list > li > a > img{
