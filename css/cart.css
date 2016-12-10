@@ -8,9 +8,36 @@
 }
 
 .table tr {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #FF6019;
 }
 
 .table_head {
     font-weight: bold;
+}
+
+.total {
+    text-align: right;
+}
+
+.button_line {
+    text-align: right;
+}
+
+.submit {
+    font-family: 'gothampro';
+    font-size: 16px;
+    color: #fff;
+    background: #FF6019;
+    text-align: center;
+    padding: 0 30px;
+    line-height: 48px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease 0s, color 0.3s ease 0s, transform 0.1s ease 0s;
+    border: 1px solid #FF6019;
+}
+
+.submit:hover {
+    color: #FF6019;
+    background: #fff;
 }
