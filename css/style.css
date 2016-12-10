@@ -153,7 +153,7 @@ body.fix{
 }
 
 .menu.special{
-    opacity: 0;
+    opacity: 1;
     z-index: 1;
     transition: opacity 0.6s ease 0.6s;
 }
@@ -401,10 +401,20 @@ body.itsie .bg.active .bg__logo{
     display: block;
     position: relative;
 }
-.menu__list > li > .cart-count{
+.menu__list > li .cart-count{
     position:absolute;
     top: 0;
     right: 0;
+    background-color: #FF6019;
+    font-size: 11px;
+    display: inline-block;
+    color: #fff;
+    height: 17px;
+    width: 17px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    font-family: 'gothampro';
 }
 
 .menu__list > li > a > img{
@@ -1221,7 +1231,7 @@ body.itsie .bg.active .bg__logo{
 
 .big__content{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
     top: 0px;
     left: 0px;
@@ -1249,7 +1259,7 @@ body.itsie .bg.active .bg__logo{
     height: 42px;
     position: absolute;
     cursor: pointer;
-    top: -20px;
+    top: 60px;
     left: 13px;
     opacity: 0;
     transition: 0.3s ease 0s;

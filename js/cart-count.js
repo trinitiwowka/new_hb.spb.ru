@@ -17,6 +17,6 @@ $(document).ready(function () {
         $(".menu__list .cart-count").text(count);
     }
     else
-        $(".menu__list .cart-count").text("");
+        $(".menu__list .cart-count").text(0);
 });
 //

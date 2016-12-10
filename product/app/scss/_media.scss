@@ -2,7 +2,16 @@
 @media (max-width: 543px) {  }
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767px) {  }
+@media (max-width: 767px) {
+  .content__left {
+    padding-top: 100px;
+  }
+
+  .content__right {
+    position: static;
+    margin-top: 30px;
+  }
+}
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991px) {  }

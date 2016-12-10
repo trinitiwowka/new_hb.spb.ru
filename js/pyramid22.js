@@ -7,7 +7,7 @@ $(document).ready(function () {
     var scroll_el = $(this).attr('href');
     $('.menu__list > li').removeClass('active');
     $(this).parent('li').addClass('active');
-    $('html, body').animate({scrollTop: $(scroll_el).offset().top}, 600);
+    $('html, body').animate({scrollTop: $(scroll_el).offset.top}, 600);
     return false; 
     });
 //end menu clicks
@@ -16,7 +16,7 @@ $(document).ready(function () {
     $('a[href^="#"]').click(function(){
     $('.wrapper__menu').removeClass('active');
     var scroll_el = $(this).attr('href');
-    $('html, body').animate({scrollTop: $(scroll_el).offset().top}, 600);
+    $('html, body').animate({scrollTop: $(scroll_el).offset.top}, 600);
     //$('html, body').animate({scrollTop: $(scroll_el).offset().top - 50}, 600);
     return false;
     });
@@ -44,7 +44,7 @@ $('.for-iframe').click(function (){
     $(".big__content").html('<iframe src="'+myVideoCode+'" align="center""></iframe>');
     $('iframe').load(function() {
         $('html, body').delay(300).animate({scrollTop: $('.screen2').offset().top}, 300, function() {
-// $('.big__content').addClass('noscroll');
+$('.big__content').addClass('noscroll');
         });
 //        if(navigator.userAgent.match(/(iPod|iPhone|iPad)/)){
 //            $(".big__content").addClass('ios');

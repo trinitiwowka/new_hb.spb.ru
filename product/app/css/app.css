@@ -1690,3 +1690,10 @@ a {
 .price {
   font-size: 24px;
   font-weight: bold; }
+
+@media (max-width: 767px) {
+  .content__left {
+    padding-top: 100px; }
+  .content__right {
+    position: static;
+    margin-top: 30px; } }

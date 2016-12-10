@@ -267,9 +267,9 @@
     width: 0px;
 }
 
-.to-site{
-    display: block;
-}
+/*.to-site{*/
+    /*display: block;*/
+/*}*/
 .wrapper__menu {
     display: flex;
     display: -webkit-flex;
@@ -382,9 +382,11 @@
 }
 
 
-@media screen and (max-width: 780px) {
-    
+@media screen and (max-width: 768px) {
 
+.big.active .menu__indoor__burger {
+    top: 60px;
+}
 
 }
 
