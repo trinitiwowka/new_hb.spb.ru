@@ -285,12 +285,6 @@
     margin-left: 0px;
 }
 
-.menu, .bg, .screen1__indoor__video, .knowledge__border{
-    display: none;
-}
-
-
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -303,10 +297,10 @@
     height: auto;
 }    
     
-.case {
-    flex: 1 1 50%;
-    -webkit-flex: 1 1 50%;
-}
+/*.case {*/
+    /*flex: 1 1 50%;*/
+    /*-webkit-flex: 1 1 50%;*/
+/*}*/
 
 .screen3__max {
     flex: 1 1;
@@ -357,6 +351,10 @@
 
 .screen1__indoor__mini, .screen-little__indoor__mini__right, .screen-little__indoor__mini__right {
     width: 95%;
+}
+
+.menu, .bg, .screen1__indoor__video, .knowledge__border{
+    display: none;
 }
 
 }

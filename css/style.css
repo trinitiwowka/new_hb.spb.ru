@@ -397,11 +397,13 @@ body.itsie .bg.active .bg__logo{
 }
 /*end bg*/
 
-.menu__list > li > a{
+.menu__list > li > a,
+.wrapper__menu .wrapper__menu__logo a {
     display: block;
     position: relative;
 }
-.menu__list > li .cart-count{
+.menu__list > li .cart-count,
+.wrapper__menu .wrapper__menu__logo .cart-count {
     position:absolute;
     top: 0;
     right: 0;
@@ -1278,7 +1280,9 @@ body.itsie .bg.active .bg__logo{
 }
 
 .menu__handle {
-    background: none;
+    mask: url("../img/arrow.svg") no-repeat 50% 50%;
+    -webkit-mask: url("../img/arrow.svg") no-repeat 50% 50%;
+    background-color: #FF6019;
     border: none;
     width: 41px;
     height: 41px;
@@ -1294,6 +1298,7 @@ body.itsie .bg.active .bg__logo{
     -webkit-transition: -webkit-transform 0.6s;
     transition: transform 0.6s;
 }
+
 
 /*.menu__handle::before, .menu__handle::after, .menu__handle span {*/
     /*background: #fff;*/
