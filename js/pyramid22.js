@@ -7,7 +7,7 @@ $(document).ready(function () {
     var scroll_el = $(this).attr('href');
     $('.menu__list > li').removeClass('active');
     $(this).parent('li').addClass('active');
-    $('html, body').animate({scrollTop: $(scroll_el).offset.top}, 600);
+    $('html, body').animate({scrollTop: $(scroll_el).offset().top}, 600);
     return false; 
     });
 //end menu clicks
@@ -16,8 +16,8 @@ $(document).ready(function () {
     $('a[href^="#"]').click(function(){
     $('.wrapper__menu').removeClass('active');
     var scroll_el = $(this).attr('href');
-    $('html, body').animate({scrollTop: $(scroll_el).offset.top}, 600);
-    //$('html, body').animate({scrollTop: $(scroll_el).offset().top - 50}, 600);
+    //$('html, body').animate({scrollTop: $(scroll_el).offset.top}, 600);
+    $('html, body').animate({scrollTop: $(scroll_el).offset().top - 50}, 600);
     return false;
     });
 

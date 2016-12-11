@@ -31,7 +31,18 @@ $(document).ready(function () {
         console.log("storage empty");
     }
     //
-
+    //функция для обновления счетчика количества елементов в корзине
+    function reset_count() {
+        var productArray_tmp=[];
+        if (localStorage.getObj('product') !== null) {
+            productArray_tmp = localStorage.getObj('product');
+            var count=productArray_tmp.length;
+            $(".menu__list .cart-count", parent.document.body).text(count);
+        }
+        else
+            $(".menu__list .cart-count", parent.document.body).text(0);
+    }
+    //
     //функция удаления товара
     $(".delete_btn").on("click",function (e) {
         e.preventDefault();
@@ -40,7 +51,7 @@ $(document).ready(function () {
         productArray.splice(id,1);
         localStorage.setObj('product', productArray);
         location.reload();
-
+        reset_count();
     });
     //
     //функция подсчета итоговой суммы
@@ -53,23 +64,26 @@ $(document).ready(function () {
         $(".total span").text(res);
         return 0;
     }
-    resultPrice();
+    resultPrice();//Дефолтный подсчет
     //
     //Подсчет цены при изменении количества
     $("tr:not(tr.table_head)").each(function() {
         var tmp_price=0;
-        var tmp_2=$(this).find("td:eq(2)").text();
+        var price=$(this).find("td:eq(2)");
+        var tmp_2=price.text();
+
         $(this).find("td:eq(1) input").change(function () {
-           //console.log($(this).val());
             var tmp_1=$(this).val();
-            //console.log(tmp_2);
-            tmp_price=parseInt(tmp_2)*parseInt(tmp_1);
-            $("tr:not(tr.table_head)").find("td:eq(2)").text(tmp_price);
+
+            if(tmp_1!="NaN")
+                tmp_price=parseInt(tmp_2)*parseInt(tmp_1);
+            else
+                tmp_price=0;
+            price.text(tmp_price);
+            console.log($(this).siblings("td"));
             resultPrice();
         });
-       // $(this).find("td:eq(2)").text(tmp_price);
-
     });
-
+    //
 
 });

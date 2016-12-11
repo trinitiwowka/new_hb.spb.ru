@@ -8,6 +8,13 @@ $(document).ready(function () {
 
     var tempCart = {};
 
+    Storage.prototype.getObj = function (key) {
+        var value = this.getItem(key);
+        return value && JSON.parse(value);
+    };
+    Storage.prototype.setObj = function (key, value) {
+        this.setItem(key, JSON.stringify(value));
+    };
     // window.onbeforeunload = function(e) {
     //     window.localStorage.removeItem("product");
     // };
@@ -18,6 +25,19 @@ $(document).ready(function () {
     }));
 
     var productArray = [];
+    //console.log($(".menu__list .cart-count", parent.document.body).text());
+    //функции работы с хранилищем
+    function reset_count() {
+        var productArray_tmp=[];
+        if (localStorage.getObj('product') !== null) {
+            productArray_tmp = localStorage.getObj('product');
+            var count=productArray_tmp.length;
+            $(".menu__list .cart-count", parent.document.body).text(count);
+        }
+        else
+            $(".menu__list .cart-count", parent.document.body).text(0);
+    }
+
 
     $(".size__btn").on("click", (function (e) {
         e.preventDefault();
@@ -56,16 +76,6 @@ $(document).ready(function () {
                 $(this).text("В корзину");
 
             });
-
-            Storage.prototype.setObj = function (key, value) {
-                this.setItem(key, JSON.stringify(value));
-            };
-
-            Storage.prototype.getObj = function (key) {
-                var value = this.getItem(key);
-                return value && JSON.parse(value);
-            };
-
             console.log(cart);
             var productJSON = {
                 "name": temp_product_name,
@@ -83,6 +93,7 @@ $(document).ready(function () {
                 productArray.push(productJSON);
                 localStorage.setObj('product', productArray);
             }
+            reset_count();
         }
     }));
 
