@@ -533,7 +533,7 @@ $font-family-base:           $font-family-sans-serif;
 // Modals
 
 // Padding applied to the modal body
-//$modal-inner-padding:         15px !default;
+$modal-inner-padding:         55px;
 
 //$modal-title-padding:         15px !default;
 //$modal-title-line-height:     $line-height !default;
@@ -543,11 +543,11 @@ $font-family-base:           $font-family-sans-serif;
 
 //$modal-backdrop-bg:           #000 !default;
 //$modal-backdrop-opacity:      .5 !default;
-//$modal-header-border-color:   #e5e5e5 !default;
-//$modal-footer-border-color:   $modal-header-border-color !default;
+$modal-header-border-color:   #fff;
+$modal-footer-border-color:   $modal-header-border-color;
 
 //$modal-lg:                    900px !default;
-//$modal-md:                    600px !default;
+$modal-md:                    690px;
 //$modal-sm:                    300px !default;
 
 

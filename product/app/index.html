@@ -19,8 +19,6 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
 	<link rel="stylesheet" href="css/app.css">
-
-
 </head>
 
 <body>
@@ -99,10 +97,41 @@
 
 									<div class="content__color">
 										<p>Выберите цвет:</p>
+
+										<a href="#" class="color__print"
+										   data-toggle="modal"
+										   data-target="#myModal">
+											Заказать принт
+										</a>
+
 										<a href="#" class="color__btn color__red" data-color="red">&nbsp;</a>
 										<a href="#" class="color__btn color__yellow" data-color="yellow">&nbsp;</a>
 										<a href="#" class="color__btn color__green" data-color="green">&nbsp;</a>
 										<a href="#" class="color__btn color__black" data-color="black">&nbsp;</a>
+
+
+
+										<!-- Modal -->
+										<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="productModal" aria-hidden="true">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-body">
+														<a href="#" class="close" data-dismiss="modal" aria-label="Close">&nbsp;</a>
+														<h4 class="modal-title" id="myModalLabel">ОСТАВЬТЕ КОНТАКТНЫЕ ДАННЫЕ</h4>
+
+														<p>Наш менеджер свяжется с Вами в ближайшее время</p>
+
+														<form action="">
+
+															<input type="text" name="name" placeholder="Ваше имя" required />
+															<input type="tel" name="phone" placeholder="Телефон" class="phone" required />
+															<!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+															<button type="submit" class="modal_submit">Пообщаться с менеджером</button>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</li>
 								<!-- end tabs__item -->
@@ -276,5 +305,7 @@
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="js/common.js"></script>
 	<script src="js/cart.js"></script>
+	<script src="js/mask.js"></script>
+
 </body>
 </html>
