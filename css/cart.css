@@ -22,24 +22,53 @@ body{
     text-align: right;
 }
 
-.button_line {
-    text-align: right;
+.input_phone {
+    width: 240px;
+    font-size: 16px;
+    color: #C8C8C8;
+    border: 1px solid #C8C8C8;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 0px;
 }
+
+.button_line {
+    position: relative;
+}
+
+.button_line label {
+    margin-bottom: 10px;
+}
+
+.button_line label::after {
+    content: '*';
+    color: red;
+}
+
+.button_line label,
+.button_line input {
+    display: block;
+}
+
 
 .input_count {
     text-align: center;
 }
 
 .submit {
-    font-family: 'gothampro';
+    position: absolute;
+    bottom: 0;
+    right: 0;
     font-size: 16px;
     color: #fff;
     background: #FF6019;
     text-align: center;
     padding: 0 30px;
-    line-height: 48px;
+    height: 44px;
+    line-height: 42px;
     cursor: pointer;
-    margin-top: 10px;
     transition: background 0.3s ease 0s, color 0.3s ease 0s, transform 0.1s ease 0s;
     border: 1px solid #FF6019;
 }
