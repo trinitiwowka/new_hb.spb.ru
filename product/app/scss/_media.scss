@@ -28,7 +28,11 @@
 @media (min-width: 544px) and (max-width: 767px) {  }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991px) {  }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content__left {
+    padding-top: 90px;
+  }
+}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199px) {  }

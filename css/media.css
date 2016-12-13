@@ -251,6 +251,11 @@
 
 }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .menu__handle {
+        top: 30px;
+    }
+}
 
 @media screen and (max-width: 1024px) {
 
@@ -265,6 +270,7 @@
     
 .menu, .screen2__mini, .screen3__mini, .screen-little__mini {
     width: 0px;
+    display: none;
 }
 
 /*.to-site{*/
@@ -388,10 +394,22 @@
 
 }
 
+@media screen and (min-width: 1000px) {
+    .case {
+        flex: 1 1 30% !important;
+        -webkit-flex: 1 1 30% !important;
+    }
+}
+@media screen and (min-width: 580px), screen and (max-width: 1000px) {
+    .case {
+        flex: 1 1 40%;
+        -webkit-flex: 1 1 40%;
+    }
+}
 @media screen and (max-width: 736px) {
-   
+
 .case {
-    height: 256px;
+    height: 300px;
 }
 
 .screen2{
