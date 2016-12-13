@@ -1603,6 +1603,11 @@ a {
 .content__item__size {
   border: 1px solid #FF6019;
   padding: 15px; }
+  .content__item__size label {
+    margin-top: .5rem; }
+  .content__item__size .content__item__count {
+    padding-left: 10px;
+    width: 100%; }
 
 .size__btn {
   display: inline-block;

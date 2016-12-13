@@ -115,6 +115,15 @@ a {
 .content__item__size {
   border: 1px solid $orange;
   padding: 15px;
+
+  label {
+    margin-top: .5rem;
+  }
+
+  .content__item__count {
+    padding-left: 10px;
+    width: 100%;
+  }
 }
 
 .size__btn {

@@ -16,7 +16,7 @@ $(document).ready(function () {
         for(var i=0;i<productArray.length;i++)
         {
             var tmp="<tr><td>"+productArray[i]["name"]+"</td>";
-            tmp+="<td>"+"<input type=\"text\" value=\"1\"class=\"input_count\"/>"+"</td>";
+            tmp+="<td>"+"<input type=\"text\" value="+productArray[i]["amount"]+" class=\"input_count\" disabled />"+"</td>";
             if(productArray[i]["price"]!==undefined)
                 tmp+="<td>"+productArray[i]["price"]+"</td>";
             else
@@ -56,10 +56,10 @@ $(document).ready(function () {
     //
     //функция подсчета итоговой суммы
     function resultPrice() {
-        var res=0;
+        var res = 0;
         $("tr:not(tr.table_head)").each(function() {
-            var tmp=$(this).find("td:eq(2)").text();
-            res+=parseInt(tmp);
+            var tmp = $(this).find("td:eq(2)").text();
+            res += parseInt(tmp);
         });
         $(".total span").text(res);
         return 0;
@@ -68,22 +68,35 @@ $(document).ready(function () {
     //
     //Подсчет цены при изменении количества
     $("tr:not(tr.table_head)").each(function() {
-        var tmp_price=0;
-        var price=$(this).find("td:eq(2)");
-        var tmp_2=price.text();
 
-        $(this).find("td:eq(1) input").change(function () {
-            var tmp_1=$(this).val();
 
-            if(tmp_1!="NaN")
-                tmp_price=parseInt(tmp_2)*parseInt(tmp_1);
+        var tmp_price = 0;
+        var price = $(this).find("td:eq(2)");
+        var tmp_2 = price.text();
+
+        $(this).find("td:eq(1) input").each(function () {
+
+            // $(this).change(function () {
+            //     var tmp_1 = $(this).val();
+            //
+            //     if(tmp_1 != "NaN")
+            //         tmp_price = parseInt(tmp_2)*parseInt(tmp_1);
+            //     else
+            //         tmp_price = 0;
+            //
+            //     price.text(tmp_price);
+            // });
+
+            var tmp_1 = $(this).val();
+
+            if(tmp_1 != "NaN")
+                tmp_price = parseInt(tmp_2)*parseInt(tmp_1);
             else
-                tmp_price=0;
+                tmp_price = 0;
+
             price.text(tmp_price);
-            console.log($(this).siblings("td"));
+            // console.log($(this).siblings("td"));
             resultPrice();
         });
     });
-    //
-
 });

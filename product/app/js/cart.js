@@ -55,15 +55,22 @@ $(document).ready(function () {
             tempCart["data-color"] = temp_product_color;
         }
 
-        var temp_product_price = $(".tabs__item.active .price span").attr("data-price");;
+        var temp_product_price = $(".tabs__item.active .price span").attr("data-price");
         if (temp_product_price != undefined) {
             tempCart["data-price"] = temp_product_price;
         }
 
-        if (tempCart["data-size"] == undefined || tempCart["data-color"] == undefined) {
+        var temp_product_amount = $(".tabs__item.active .content__item__count").val();
+        if (temp_product_price != undefined) {
+            tempCart["data-amount"] = temp_product_amount;
+        }
+
+        if (tempCart["data-size"] == undefined || tempCart["data-color"] == undefined || tempCart["data-amount"] == 0) {
             alert("выберите цвет/размер");
         }
         else {
+
+            console.log(tempCart["data-amount"]);
             var cart = tempCart;
             tempCart = {};
 
@@ -78,10 +85,11 @@ $(document).ready(function () {
             });
             console.log(cart);
             var productJSON = {
-                "name": temp_product_name,
-                "size": temp_product_size,
-                "color": temp_product_color,
-                "price": temp_product_price
+                "name":     temp_product_name,
+                "size":     temp_product_size,
+                "color":    temp_product_color,
+                "price":    temp_product_price,
+                "amount":   temp_product_amount
             };
 
             if (localStorage.getObj('product') !== null) {
