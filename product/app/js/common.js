@@ -2,6 +2,10 @@ $(document).ready(function() {
 
     $('input[name="phone"]').mask("+7 (999) 999-9999");
 
+    $(".popup-submit").click(function () {
+        $(".form-popup").hide();
+    });
+
     $('.tabs__control-link').on('click', function (e) {
         e.preventDefault();
 

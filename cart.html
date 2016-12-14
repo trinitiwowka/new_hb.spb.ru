@@ -38,12 +38,20 @@
 
     <p class="total">Итого: <span>0,00</span> руб.</p>
 
-    <form class="button_line">
-        <button type="submit" class="submit">Отправить</button>
+    <form class="button_line" id="cart_form">
+
+        <input name="" type="hidden" value="" />
+
 
         <label for="phone">Введите Ваш телефон</label>
         <input id="phone" name="phone" type="text" placeholder="Телефон" class="input_phone" required />
+        <button type="submit" class="submit">Отправить</button>
     </form>
+
+    <div class="form-popup" style="display: none;">
+        <p>Спасибо за заявку!</p>
+        <button class="popup-submit">закрыть</button>
+    </div>
 
 </div>
 

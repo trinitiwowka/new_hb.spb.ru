@@ -104,5 +104,41 @@ $(document).ready(function () {
 
     //Добавление скрытых полей в форму
 
+    if (localStorage.getObj('product') !== null) {
+        productArray = localStorage.getObj('product');
+        for(var j = 0; j < productArray.length; j++)
+        {
+
+            var item = "<input name=\"name\" type=\"hidden\" value="+ productArray[j]["name"] +" />";
+            item += "<input name=\"color\" type=\"hidden\" value="+ productArray[j]["color"] +" />";
+            item += "<input name=\"size\" type=\"hidden\" value="+ productArray[j]["size"] +" />";
+            item += "<input name=\"price\" type=\"hidden\" value="+ productArray[j]["price"] +" />";
+            item += "<input name=\"amount\" type=\"hidden\" value="+ productArray[j]["amount"] +" />";
+
+            $("#cart_form").append(item);
+
+        }
+    }
+
+    //Отправка данных из корзины на почту
+
+    $("#cart_form").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "cart.php", //Change
+            data: th.serialize()
+        }).done(function() {
+
+            alert("Done");
+
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 3000);
+        });
+        return false;
+    });
+
 
 });
