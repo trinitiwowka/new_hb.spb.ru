@@ -1,13 +1,18 @@
 body{
     background-color: #fff;
+    font-family: Arial, sans-serif;
 }
 .container {
-    width: 1000px;
+    width: 80%;
     margin: 0 auto;
 }
 
 .table {
     border-collapse: collapse;
+}
+
+.table_wrap {
+    overflow-x: auto;
 }
 
 .table tr {
@@ -91,13 +96,24 @@ body{
     transform: translate(-50%, -50%);
     padding: 50px 70px;
     z-index: 99;
-    display: none; }
+    display: none;
+}
+
 .form-popup p {
     font-family: 'gothampro-black';
     font-size: 40px;
     line-height: 46px;
     color: #383838;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+}
 .form-popup button {
     display: block;
-    width: 100%; }
+    width: 100%;
+}
+
+@media screen and (max-width: 572px) {
+    .submit {
+        position: static;
+        margin-top: 20px;
+    }
+}

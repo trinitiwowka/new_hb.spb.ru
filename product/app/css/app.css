@@ -1622,6 +1622,9 @@ tbody.collapse.in {
 /* --------------------------------------------------------
    Custom application specific styles
    -------------------------------------------------------- */
+* {
+  outline: none !important; }
+
 ul {
   margin: 0;
   padding: 0; }
@@ -1707,6 +1710,7 @@ a {
   border: 1px solid #FF6019;
   padding: 15px; }
   .content__item__size label {
+    display: block;
     margin-top: .5rem; }
   .content__item__size .content__item__count {
     padding-left: 10px;
@@ -1874,7 +1878,24 @@ a {
     padding-top: 100px; }
   .content__right {
     position: static;
-    margin-top: 30px; } }
+    margin-top: 30px; }
+  .modal-dialog {
+    margin-top: 60px; } }
+
+@media (max-width: 1023px) {
+  .modal-dialog {
+    margin-top: 60px; } }
+
+@media (max-width: 543px) {
+  .color__print {
+    width: 40%; }
+  .modal-title {
+    font-size: 18px;
+    line-height: 25px; }
+  .modal-body input {
+    width: 100%; }
+  .modal-body {
+    padding: 40px; } }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .content__left {

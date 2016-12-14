@@ -3,6 +3,10 @@
 
 $orange: #FF6019;
 
+* {
+  outline: none !important;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -117,6 +121,7 @@ a {
   padding: 15px;
 
   label {
+    display: block;
     margin-top: .5rem;
   }
 
