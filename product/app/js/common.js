@@ -16,4 +16,24 @@ $(document).ready(function() {
             .removeClass('active');
     });
 
+    //E-mail Ajax Send
+    $("#formModal").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "send.php", //Change
+            data: th.serialize()
+        }).done(function() {
+
+            $(".form-popup").show();
+
+            $('input[type="text"]').val('');
+
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 3000);
+        });
+        return false;
+    });
 });

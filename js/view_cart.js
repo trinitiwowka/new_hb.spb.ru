@@ -99,4 +99,10 @@ $(document).ready(function () {
             resultPrice();
         });
     });
+
+
+
+    //Добавление скрытых полей в форму
+
+
 });
