@@ -2,6 +2,7 @@
  * Created by Trinitiwowka on 10.12.2016.
  */
 $(document).ready(function () {
+
     var productArray = [];
     //функции работы с хранилищем
     Storage.prototype.getObj = function (key) {

@@ -130,7 +130,7 @@ $(document).ready(function () {
             data: th.serialize()
         }).done(function() {
 
-            alert("Done");
+            $(".form-popup").show();
 
             setTimeout(function() {
                 // Done Functions
@@ -138,6 +138,10 @@ $(document).ready(function () {
             }, 3000);
         });
         return false;
+    });
+
+    $(".popup-submit").click(function () {
+        $(".form-popup").hide();
     });
 
 
