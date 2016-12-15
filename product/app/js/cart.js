@@ -55,6 +55,11 @@ $(document).ready(function () {
         e.preventDefault();
 
         var temp_product_name = $(".tabs__controls-item.active .tabs__control-link").attr("data-name");
+
+        var productCategory = $(".content__topline > h2").html();
+
+        temp_product_name = productCategory +  " " + temp_product_name;
+
         tempCart["data-name"] = temp_product_name;
 
         var temp_product_size = $(".tabs__item.active .content__item__size input[name=\"size\"]:checked").val();

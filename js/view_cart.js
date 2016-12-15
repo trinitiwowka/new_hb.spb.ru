@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+
     var productArray = [];
     //функции работы с хранилищем
     Storage.prototype.getObj = function (key) {
