@@ -24,7 +24,15 @@ $(document).ready(function () {
 
         $(this).addClass("active").siblings().removeClass("active");
 
+        var
+            item = $(this),
+            display = $(".tabs__item.active .content__item__img"),
+            path = item.find("img").attr("src"),
+            duration = 300;
 
+        display.find("img").fadeOut(duration, function () {
+            $(this).attr("src", path).fadeIn(duration);
+        });
 
     }));
 
