@@ -21,7 +21,11 @@ $(document).ready(function () {
 
     $(".color__btn").on('click', (function (e) {
         e.preventDefault();
+
         $(this).addClass("active").siblings().removeClass("active");
+
+
+
     }));
 
     var productArray = [];

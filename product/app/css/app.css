@@ -1841,6 +1841,8 @@ a {
     background-size: contain; }
   .color__btn:hover {
     color: #fff; }
+  .color__btn img {
+    display: none; }
 
 .color__print {
   width: 29%;
