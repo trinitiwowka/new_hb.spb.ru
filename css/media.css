@@ -291,6 +291,11 @@
     margin-left: 0px;
 }
 
+.menu__list > li .cart-count, .wrapper__menu .wrapper__menu__logo .cart-count {
+    opacity: 1;
+    right: 12px;
+}
+
 }
 
 @media screen and (max-width: 1000px) {

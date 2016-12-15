@@ -1,0 +1,105 @@
+// add your custom styles here
+// to learn more about SASS, visit sass-lang.com
+
+$orange: #FF6019;
+
+* {
+  outline: none !important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+a {
+  transition: background 0.3s ease 0s, color 0.3s ease 0s, transform 0.1s ease 0s;
+}
+
+/* ---------------------------- */
+/*  POST
+/* ---------------------------- */
+
+.content {
+  padding: 2rem 0;
+}
+
+.post_way {
+  padding: 2rem 0 1rem;
+}
+
+.post_way_img {
+  max-width: 70%;
+
+  img {
+    width: 100%;
+  }
+}
+
+/* ---------------------------- */
+/*  CAROUSEL
+/* ---------------------------- */
+
+.carousel_title {
+  margin: 1.5rem 0;
+}
+
+.owl-item {
+  text-align: center;
+}
+
+.owl-item {
+  vertical-align: middle;
+  display: inline-block !important;
+  height: 115px;
+  position: relative;
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.owl-nav {
+  text-align: center;
+}
+
+.owl-nav > div {
+  display: inline-block;
+  margin: 0 5px;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  background-color: #fff;
+  border: 1px solid $orange;
+  color: $orange;
+
+  &:hover {
+    background-color: $orange;
+    color: #fff;
+  }
+
+  &:focus,
+  &:active {
+    background-color: #fff;
+    color: $orange;
+  }
+}
+
+.owl-stage-outer {
+  margin-bottom: 15px;
+}

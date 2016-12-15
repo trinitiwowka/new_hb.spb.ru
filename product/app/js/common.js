@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    $('[data-toggle="tooltip"]').tooltip();
+
     $('input[name="phone"]').mask("+7 (999) 999-9999");
 
     $(".popup-submit").click(function () {
