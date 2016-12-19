@@ -1,15 +1,28 @@
 <?php
 
-$headers= "MIME-Version: 1.0\r\n";
-$headers .= "Content-type: text/html; charset=utf-8 \r\n";
-$headers .= "From: <info@mydefend.pro>\r\n";
+		$headers= "MIME-Version: 1.0\r\n";
+		$headers .= "Content-type: text/html; charset=utf-8 \r\n";
+		$headers .= "From: <info@mydefend.pro>\r\n";
+		$send="Shafigalov@gmail.com";
+		$message;
 
-  mail ("kashirin1242@gmail.com",
-        "сообщение - с ".$_SERVER['HTTP_REFERER'],
-        "<br>Товар: ".$_POST['name'].
-        "<br>Цвет: ".$_POST['color'].
-        "<br>Размер: ".$_POST['size'].
-        "<br>Цена: ".$_POST['price'].
-		"<br>Количество: ".$_POST['amount'], $headers);
+		$name = $_POST['name'];
+		$color = $_POST['color'];
+		$size = $_POST['size'];
+		$price = $_POST['price'];
+		$amount = $_POST['amount'];
 
- ?>
+		foreach( $name as $key => $n ) {
+		$message.="name :".$n.
+		"<br>color : ".$color[$key].
+		"<br>size :".$size[$key].
+		"<br>price :".$price[$key].
+		"<br>amount :".$amount[$key]."<br><hr><br>";
+		}
+		$message.="Итого: ".$_POST["resultPrice"]."руб<br>".
+		"Телефон: ".$_POST["phone"];
+		mail ($send,
+		"сообщение - с ".$_SERVER['HTTP_REFERER'],
+		$message, $headers);
+
+		?>

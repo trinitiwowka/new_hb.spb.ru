@@ -1755,7 +1755,10 @@ iframe{
     background: url(../img/close.jpg) no-repeat;
     cursor: pointer;
 }
+.popup_close:hover {
 
+    opacity: 0.5;
+}
 .popup__indoor {
     width: 554px;
     margin: 0px auto;

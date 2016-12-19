@@ -64,6 +64,7 @@ $(document).ready(function () {
             res += parseInt(tmp);
         });
         $(".total span").text(res);
+        $("#resultPrice").val(res);
         return 0;
     }
     resultPrice();//Дефолтный подсчет
@@ -100,6 +101,7 @@ $(document).ready(function () {
             // console.log($(this).siblings("td"));
             resultPrice();
         });
+
     });
 
 
@@ -111,15 +113,20 @@ $(document).ready(function () {
         for(var j = 0; j < productArray.length; j++)
         {
 
-            var item = "<input name=\"name\" type=\"hidden\" value="+ productArray[j]["name"] +" />";
-            item += "<input name=\"color\" type=\"hidden\" value="+ productArray[j]["color"] +" />";
-            item += "<input name=\"size\" type=\"hidden\" value="+ productArray[j]["size"] +" />";
-            item += "<input name=\"price\" type=\"hidden\" value="+ productArray[j]["price"] +" />";
-            item += "<input name=\"amount\" type=\"hidden\" value="+ productArray[j]["amount"] +" />";
-
+            var item = "<input name=\"name["+j+"]\" type=\"hidden\" value=\""      +      productArray[j]["name"]   +"\" >";
+            item += "<input name=\"color["+j+"]\"  type=\"hidden\" value="+ productArray[j]["color"] +" />";
+            item += "<input name=\"size["+j+"]\" type=\"hidden\" value="+ productArray[j]["size"] +" />";
+            item += "<input name=\"price["+j+"]\" type=\"hidden\" value="+ productArray[j]["price"] +" />";
+            item += "<input name=\"amount["+j+"]\" type=\"hidden\" value="+ productArray[j]["amount"] +" />";
+            // var item = "<input name=\"name\" type=\"hidden\" value=\""      +      productArray[j]["name"]   +"\" >";
+            // item += "<input name=\"levels["+j+"][color]\" type=\"hidden\" value="+ productArray[j]["color"] +" />";
+            // item += "<input name=\"levels["+j+"][size]\" type=\"hidden\" value="+ productArray[j]["size"] +" />";
+            // item += "<input name=\"levels["+j+"][price]\" type=\"hidden\" value="+ productArray[j]["price"] +" />";
+            // item += "<input name=\"levels["+j+"][amount]\" type=\"hidden\" value="+ productArray[j]["amount"] +" />";
             $("#cart_form").append(item);
 
         }
+
     }
 
     //Отправка данных из корзины на почту
