@@ -264,6 +264,16 @@ a {
   }
 }
 
+.more_btn {
+  @extend .color__btn;
+  margin-right: 1%;
+  color: $orange;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
 /* ---------------------------- */
 /*  TABS
 /* ---------------------------- */

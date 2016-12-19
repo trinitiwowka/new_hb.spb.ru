@@ -24,7 +24,7 @@ $(document).ready(function () {
             else
                 tmp+="<td>"+0+"</td>";
             tmp+="<td>"+productArray[i]["size"]+"</td>";
-            tmp+="<td>"+productArray[i]["color"]+"</td>";
+            tmp+="<td><div style=\"height: 17px; width: 25px; margin: auto; background-color: " +productArray[i]["color"]+ "\"></div></td>";
             tmp+="<td>" + "<a class=\"delete_btn\" href=\"#\"id=" + i + ">удалить</a>"+"</td></tr>";
             $(".table").append(tmp);
         }

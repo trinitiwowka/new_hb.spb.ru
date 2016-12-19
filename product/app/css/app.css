@@ -1817,7 +1817,7 @@ a {
 .content__color {
   margin-top: 30px; }
 
-.color__btn {
+.color__btn, .more_btn {
   border: 1px solid #FF6019;
   text-align: center;
   display: inline-block;
@@ -1825,12 +1825,12 @@ a {
   padding: 5px 0;
   color: #fff;
   margin-bottom: 10px; }
-  .color__btn.active {
+  .color__btn.active, .active.more_btn {
     background: url(../img/done.png) no-repeat center;
     background-size: contain; }
-  .color__btn:hover {
+  .color__btn:hover, .more_btn:hover {
     color: #fff; }
-  .color__btn img {
+  .color__btn img, .more_btn img {
     display: none; }
 
 /* ---------------------------- */
@@ -1896,6 +1896,12 @@ a {
   .form-popup button {
     display: block;
     width: 100%; }
+
+.more_btn {
+  margin-right: 1%;
+  color: #FF6019; }
+  .more_btn:hover {
+    color: #FF6019; }
 
 /* ---------------------------- */
 /*  TABS
