@@ -172,7 +172,6 @@ body.fix{
 }
 .menu__list {
     width: 66px;
-    margin: 10px auto 0px;
 }
 
 body.itsie .menu__list {
@@ -402,6 +401,9 @@ body.itsie .bg.active .bg__logo{
 .wrapper__menu .wrapper__menu__logo a {
     display: block;
     position: relative;
+	height: 100%;
+	padding: 10px 0 0 10px;
+	z-index: 9999;
 }
 .menu__list > li .cart-count,
 .wrapper__menu .wrapper__menu__logo .cart-count {
@@ -1474,7 +1476,7 @@ iframe{
 
 .wrapper__menu__logo{
     float: left;
-    margin: 10px 10px 0px 17px;
+    height: 50px;
 }
 
 .wrapper__menu__logo > img{

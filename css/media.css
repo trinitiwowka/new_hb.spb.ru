@@ -293,7 +293,7 @@
 
 .menu__list > li .cart-count, .wrapper__menu .wrapper__menu__logo .cart-count {
     opacity: 1;
-    right: 12px;
+    right: 5px;
 }
 
 }
